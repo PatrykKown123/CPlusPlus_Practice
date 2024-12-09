@@ -20,6 +20,8 @@ namespace Logic {
         float getEfficiency() const;
 
         //Declare other methods as needed
+        virtual float range(float capacity, float efficiency) = 0;
+        virtual ~Car() = default;
     };
 }
 

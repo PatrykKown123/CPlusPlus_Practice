@@ -22,6 +22,8 @@ namespace Logic {
         void setBatteryCapacity(float batteryCapacity);
 
         //Declare the required methods
+        float range(float capacity, float efficiency) override;
+        ~ElectricCar() override = default;
     };
 }
 
