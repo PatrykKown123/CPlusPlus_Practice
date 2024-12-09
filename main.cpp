@@ -58,6 +58,8 @@ int main() {
                 }
                 if(carCount < 10) {
                     carDB[carCount++] = new Logic::ICECar(energy, capacity, plateNumber, carMake, efficiency);
+                } else {
+                    std::cout << "Max amount of cars reached!";
                 }
             } else if(carType == "Electric") {
                 std::cout << "You are creating a: "
@@ -101,6 +103,8 @@ int main() {
                 }
                 if(carCount < 10) {
                     carDB[carCount++] = new Logic::ElectricCar(energy, capacity, plateNumber, carMake, efficiency);
+                } else {
+                    std::cout << "Max amount of cars reached!";
                 }
         }
 
@@ -109,19 +113,19 @@ int main() {
             float distance;
             std::cin >> distance;
             std::cin.ignore(25, '\n');
-            std::cout <<"Plate Number     Make     Efficiency     Range     Travel Cost(100km)"<< std::endl;
+            std::cout <<"Plate Number     Make       Efficiency     Range     Travel Cost(100km)"<< std::endl;
             for(int i = 0; i < carCount; i++) {
                 if(carDB[i] != nullptr) {
                     std::cout
                     << carDB[i]->getPlateNumber()
-                    <<"     "
+                    <<"           "
                     << carDB[i]->getMake()
-                    <<"     "
+                    <<"      "
                     << carDB[i]->getEfficiency()
-                    <<"     "
+                    <<"             "
                     << carDB[i]->range()
                     <<"     "
-                    << carDB[i]->travelCost(100)
+                    << carDB[i]->travelCost(distance)
                     << std::endl;
                 }
             }

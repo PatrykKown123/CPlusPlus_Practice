@@ -38,6 +38,6 @@ namespace Logic {
         return (this->batteryCapacity*this->getEfficiency())/this->energyPerKm;
     }
     float ElectricCar::travelCost(float distanceToTravel) {
-        return (this->energyPerKm * distanceToTravel * 0.40);
+        return (this->energyPerKm * distanceToTravel * 0.40f);
     }
 } // Logic
