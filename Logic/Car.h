@@ -14,7 +14,7 @@ namespace Logic {
         float efficiency;
     public:
         //Declare the constructor
-
+        Car(std::string plateNumber, std::string make, float efficiency);
         std::string getPlateNumber() const;
         std::string getMake() const;
         float getEfficiency() const;

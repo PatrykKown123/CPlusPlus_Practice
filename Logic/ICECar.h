@@ -4,16 +4,17 @@
 
 #ifndef ICECAR_H
 #define ICECAR_H
+#include "Car.h"
 
 namespace Logic {
     //Establish the required class relationship
-    class ICECar {
+    class ICECar: public Car{
     private:
         float fuelPerKm;
         float tankCapacity;
     public:
         //Declare the constructor
-
+        ICECar(float fuelPerKm, float  tankCapacity, std::string plateNumber, std::string make, float efficiency);
         float getFuelPerKm() const;
         float getTankCapacity() const;
         void setFuelPerKm(float fuelPerKm);

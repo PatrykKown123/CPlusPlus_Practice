@@ -5,4 +5,9 @@
 #include "Car.h"
 
 namespace Logic {
+    Car::Car(std::string plateNumber, std::string make, float efficiency) {
+        this->plateNumber = plateNumber;
+        this->make = make;
+        this->efficiency = efficiency;
+    }
 } // Logic
