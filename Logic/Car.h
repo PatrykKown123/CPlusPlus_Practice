@@ -21,6 +21,7 @@ namespace Logic {
 
         //Declare other methods as needed
         virtual float range() = 0;
+        virtual float travelCost(float distanceToTravel) = 0;
         virtual ~Car() = default;
     };
 }

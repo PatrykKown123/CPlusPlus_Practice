@@ -33,4 +33,7 @@ namespace Logic {
     float ICECar::range() {
         return (this->tankCapacity*this->getEfficiency())/this->fuelPerKm;
     }
+    float ICECar::travelCost(float distanceToTravel) {
+        return (this->fuelPerKm * distanceToTravel * 1.50);
+    }
 } // Logic

@@ -23,6 +23,7 @@ namespace Logic {
 
         //Declare the required methods
         float range() override;
+        float travelCost(float distanceToTravel) override;
         ~ElectricCar() override = default;
     };
 }
