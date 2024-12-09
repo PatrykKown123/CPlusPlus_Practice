@@ -13,14 +13,18 @@ namespace Logic {
     }
     // <-- Mutator methods implementations for ElectricCar class -->
     void ElectricCar::setEnergyPerKm(float energyPerKm) {
-        if(energyPerKm>0)
+        if(energyPerKm>0) {
             this->energyPerKm = energyPerKm;
-        throw std::invalid_argument("Energy per KM cannot be less than zero");
+        } else {
+            throw std::invalid_argument("Energy per KM cannot be less than zero");
+        }
     }
     void ElectricCar::setBatteryCapacity(float batteryCapacity) {
-        if(batteryCapacity>0)
+        if(batteryCapacity>0) {
             this->batteryCapacity = batteryCapacity;
-        throw std::invalid_argument("Battery capacity cannot be less than zero");
+        } else {
+            throw std::invalid_argument("Battery capacity cannot be less than zero");
+        }
     }
     // <-- Accessor methods implementations for ElectricCar class -->
     float ElectricCar::getEnergyPerKm() const{

@@ -13,14 +13,18 @@ namespace Logic {
     }
     //<--- Mutators for ICECar class --->
     void ICECar::setTankCapacity(float tankCapacity) {
-        if(tankCapacity > 0)
+        if(tankCapacity > 0) {
             this->tankCapacity = tankCapacity;
-        throw std::invalid_argument("Tank capacity must be greater than zero");
+        } else {
+            throw std::invalid_argument("Tank capacity must be greater than zero");
+        }
     }
     void ICECar::setFuelPerKm(float fuelPerKm) {
-        if(fuelPerKm > 0)
+        if(fuelPerKm > 0) {
             this->fuelPerKm = fuelPerKm;
-        throw std::invalid_argument("Fuel power must be greater than zero");
+        } else {
+            throw std::invalid_argument("Fuel power must be greater than zero");
+        }
     }
     //<--- Accessors for ICECar class --->
     float ICECar::getFuelPerKm() const{

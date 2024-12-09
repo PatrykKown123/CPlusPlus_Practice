@@ -7,6 +7,7 @@ int main() {
     int carCount = 0;
     while (true) {
         std::cout << "Welcome to car implementation!" << std::endl;
+        std::cout << "Do you want to add a new vechile?"
 
         std::cout << "Are you adding either an ICE or Electric?" << std::endl;
         std::string carType;
@@ -33,9 +34,9 @@ int main() {
             float efficiency;
             std::cin >> efficiency;
             std::cin.ignore(25, '\n');
-            if(efficiency != 0 || efficiency != 1) {
-                std::cout << "Invalid input, please enter 1 or 0" << std::endl;
-            }
+            // if(efficiency != 0 || efficiency != 1) {
+            //     std::cout << "Invalid input, please enter 1 or 0" << std::endl;
+            // }
             float energy;
             float capacity;
             try {
@@ -64,28 +65,34 @@ int main() {
             std::cout << "Please enter your license plate number: ";
             std::string plateNumber;
             std::cin >> plateNumber;
+            std::cin.ignore(25, '\n');
 
             std::cout << "Please enter your car make: ";
             std::string carMake;
             std::cin >> carMake;
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore(25, '\n');
+
             std::cout << "Please enter your effiency (1 or 0): " << std::endl;
             float efficiency;
             std::cin >> efficiency;
-            if(efficiency != 0 || efficiency != 1) {
-                std::cout << "Invalid input, please enter 1 or 0" << std::endl;
-            }
+            std::cin.ignore(25, '\n');
+
+            // if(efficiency != 0 || efficiency != 1) {
+            //     std::cout << "Invalid input, please enter 1 or 0" << std::endl;
+            // }
             float energy;
             float capacity;
             try {
                 std::cout << "Please enter your fuel consumption per KM: " << std::endl;
                 std::cin >> energy;
+                std::cin.ignore(25, '\n');
             } catch(std::exception& e) {
                 std::cout << e.what()<< std::endl;
             }
             try {
                 std::cout << "Please enter your tank capacity in liters " << std::endl;
                 std::cin >> capacity;
+                std::cin.ignore(25, '\n');
             } catch(std::exception& e) {
                 std::cout << e.what()<< std::endl;
             }
