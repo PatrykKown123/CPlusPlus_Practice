@@ -42,22 +42,21 @@ int main() {
                 // }
                 float energy;
                 float capacity;
-                try {
-                    std::cout << "Please enter your energy consumption per KM: " << std::endl;
-                    std::cin >> energy;
-                    std::cin.ignore(25, '\n');
-                } catch(std::exception& e) {
-                    std::cout << e.what()<< std::endl;
-                }
-                try {
-                    std::cout << "Please enter your battery capacity in kWh " << std::endl;
-                    std::cin >> capacity;
-                    std::cin.ignore(25, '\n');
-                } catch(std::exception& e) {
-                    std::cout << e.what()<< std::endl;
-                }
+
+                std::cout << "Please enter your energy consumption per KM: " << std::endl;
+                std::cin >> energy;
+                std::cin.ignore(25, '\n');
+
+                std::cout << "Please enter your battery capacity in kWh " << std::endl;
+                std::cin >> capacity;
+                std::cin.ignore(25, '\n');
+
                 if(carCount < 10) {
-                    carDB[carCount++] = new Logic::ICECar(energy, capacity, plateNumber, carMake, efficiency);
+                    try {
+                        carDB[carCount++] = new Logic::ICECar(energy, capacity, plateNumber, carMake, efficiency);
+                    } catch(std::exception& e) {
+                        std::cout << e.what() << std::endl;
+                    }
                 } else {
                     std::cout << "Max amount of cars reached!";
                 }
@@ -82,27 +81,23 @@ int main() {
                 std::cin >> efficiency;
                 std::cin.ignore(25, '\n');
 
-                // if(efficiency != 0 || efficiency != 1) {
-                //     std::cout << "Invalid input, please enter 1 or 0" << std::endl;
-                // }
                 float energy;
                 float capacity;
-                try {
-                    std::cout << "Please enter your fuel consumption per KM: " << std::endl;
-                    std::cin >> energy;
-                    std::cin.ignore(25, '\n');
-                } catch(std::exception& e) {
-                    std::cout << e.what()<< std::endl;
-                }
-                try {
-                    std::cout << "Please enter your tank capacity in liters " << std::endl;
-                    std::cin >> capacity;
-                    std::cin.ignore(25, '\n');
-                } catch(std::exception& e) {
-                    std::cout << e.what()<< std::endl;
-                }
+
+                std::cout << "Please enter your fuel consumption per KM: " << std::endl;
+                std::cin >> energy;
+                std::cin.ignore(25, '\n');
+                std::cout << "Please enter your tank capacity in liters " << std::endl;
+                std::cin >> capacity;
+                std::cin.ignore(25, '\n');
+
                 if(carCount < 10) {
-                    carDB[carCount++] = new Logic::ElectricCar(energy, capacity, plateNumber, carMake, efficiency);
+                    try {
+                        carDB[carCount++] = new Logic::ElectricCar(energy, capacity, plateNumber, carMake, efficiency);
+                    } catch(std::exception& e) {
+                        std::cout << e.what() << std::endl;
+                    }
+
                 } else {
                     std::cout << "Max amount of cars reached!";
                 }
