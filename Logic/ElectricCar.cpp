@@ -29,4 +29,8 @@ namespace Logic {
     float ElectricCar::getBatteryCapacity() const {
         return this->batteryCapacity;
     }
+    //<--- Polymorphic functions --->
+    float ElectricCar::range() {
+        return (this->batteryCapacity*this->getEfficiency())/this->energyPerKm;
+    }
 } // Logic

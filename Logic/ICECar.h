@@ -21,6 +21,7 @@ namespace Logic {
         void setTankCapacity(float tankCapacity);
 
         //Declare the required methods
+        float range() override;
         ~ICECar() override = default;
     };
 }

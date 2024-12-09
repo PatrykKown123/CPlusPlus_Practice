@@ -29,5 +29,8 @@ namespace Logic {
     float ICECar::getTankCapacity() const {
         return this->tankCapacity;
     }
-
+    //<--- Polymorphic functions --->
+    float ICECar::range() {
+        return (this->tankCapacity*this->getEfficiency())/this->fuelPerKm;
+    }
 } // Logic
